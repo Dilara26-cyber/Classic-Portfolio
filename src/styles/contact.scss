@@ -1,0 +1,44 @@
+.contact-page {
+  background: hsl(210, 36%, 96%);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 5rem 0;
+}
+
+.contact-form {
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.3s ease-in;
+  width: 90vw;
+  max-width: 1170px;
+}
+.contact-form h3 {
+  padding-top: 1.25rem;
+  color: hsl(210, 22%, 49%);
+}
+
+textarea {
+  resize: none;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  margin-bottom: 1.25rem;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+.form-control::placeholder {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+label {
+  font-size: 0.75rem;
+  opacity: 0;
+}
+.submit-btn:hover {
+  background-color: #f73849;
+}

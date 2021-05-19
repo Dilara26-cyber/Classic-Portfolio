@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Comments from './components/Comments';
 
 function App() {
+  const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const handleToggle = () => {
+    setToggle((prev) => !toggle);
+  };
+  const setToScroll = () => {
+    if (window.scrollY > 0) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', setToScroll);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar toggle={toggle} handleToggle={handleToggle} scrolled={scrolled} />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Comments />
+        <Contact />
+      </main>
     </div>
   );
 }

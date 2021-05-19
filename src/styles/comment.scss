@@ -1,0 +1,25 @@
+.comment {
+  position: relative;
+  margin: 2em 0;
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+}
+
+hr {
+  display: block;
+  width: 100%;
+  margin: 2em 0;
+  opacity: 0.3;
+  height: 1px;
+}
+.comments__heading p {
+  margin: 1em 0;
+}
+.comments__heading {
+  text-align: center;
+}
